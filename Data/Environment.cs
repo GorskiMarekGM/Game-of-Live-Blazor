@@ -5,6 +5,19 @@ namespace blazorserver01.Data
         private int rows = 1;
         private int cols = 1;
         private BioUnit[,] cell; 
+        public int aliveNeighbors(int i,int j) {
+            int c=0;
+            c += this.is_alive(i-1,j-1)?1:0;
+            c += this.is_alive(i-1,j)?1:0;
+            c += this.is_alive(i-1,j+1)?1:0;
+            c += this.is_alive(i,j-1)?1:0;
+            c += this.is_alive(i,j+1)?1:0;
+            c += this.is_alive(i+1,j-1)?1:0;
+            c += this.is_alive(i+1,j)?1:0;
+            c += this.is_alive(i+1,j+1)?1:0;
+            return c;
+        }
+
         public Environment(int rows_,int columns_) {
             this.rows = rows_;
             this.cols = columns_;
@@ -34,6 +47,29 @@ namespace blazorserver01.Data
             if(this.rightPos(i,j))
                 return this.cell[i,j].is_alive();
             return false;
+        }
+
+        public void nextConwayStep() {
+            int n;
+            bool[,] aux = new bool[this.rows,this.cols];
+            for(var i=0; i<this.rows; i++)
+            for(var j=0; j<this.cols; j++) {
+                 n = this.aliveNeighbors(i,j);
+                 
+            if(n==3) //Conway’s original rule
+                 aux[i,j] = true;
+            else if (n==2 && this.is_alive(i,j))
+                 aux[i,j] = true;
+            else
+                  aux[i,j] = false;
+            }
+            for(var i=0; i<this.rows; i++)
+            for(var j=0; j<this.cols; j++) {
+                if(aux[i,j])
+                    this.live(i,j);
+                else
+                 this.die(i,j);
+                }
         }
     }
 }
