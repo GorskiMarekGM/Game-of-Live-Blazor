@@ -5,7 +5,7 @@ namespace blazorserver01.Data
         private int rows = 1;
         private int cols = 1;
         private BioUnit[,] cell; 
-        public int aliveNeighbors(int i,int j) {
+        /*public int aliveNeighbors(int i,int j) {
             int c=0;
             c += this.is_alive(i-1,j-1)?1:0;
             c += this.is_alive(i-1,j)?1:0;
@@ -16,7 +16,7 @@ namespace blazorserver01.Data
             c += this.is_alive(i+1,j)?1:0;
             c += this.is_alive(i+1,j+1)?1:0;
             return c;
-        }
+        }*/
 
         public Environment(int rows_,int columns_) {
             this.rows = rows_;
@@ -24,7 +24,7 @@ namespace blazorserver01.Data
             this.cell = new BioUnit[this.rows,this.cols];
             for(var i=0; i<this.rows; i++)
             for(var j=0; j<this.cols; j++)
-                this.cell[i,j] = new BioUnit();
+                this.cell[i,j] = null; //new BioUnit();
         }
         public int total_of_rows(){
             return this.rows;
@@ -32,7 +32,24 @@ namespace blazorserver01.Data
         public int total_of_cols() {
             return this.cols;
         }
-        public void live(int i,int j) {
+
+        private bool rightPos(int i, int j){
+            return((i>=0) && (i<this.rows) && (j>=0) && (j<this.cols));
+        }
+
+        public void insert(int i, int j, BioUnit been){
+            if(this.rightPos(i,j)){
+                this.cell[i,j] = been;
+            }
+        }
+
+        public BioUnit bioUnit(int i, int j){
+            if(this.rightPos(i,j)){
+                return this.cell[i,j];
+            }
+            return null;
+        }
+        /*public void live(int i,int j) {
             if(this.rightPos(i,j))
                 this.cell[i,j].live();
         }
@@ -70,6 +87,6 @@ namespace blazorserver01.Data
                 else
                  this.die(i,j);
                 }
-        }
+        }*/
     }
 }

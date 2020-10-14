@@ -7,14 +7,14 @@
 @{
     //initial pattern
     if(currentCount == 0){
-        e.live(3,3);
+       /* e.live(3,3);
         e.live(3,4);
         e.live(2,3);
         e.live(2,4);
 
         e.live(6,5);
         e.live(5,6);
-        e.live(6,6);
+        e.live(6,6);*/
     }
 
 }
@@ -22,13 +22,13 @@
     @for(var i=0; i< @e.total_of_rows(); i++){
         <tr>
             @for(var j=0; j< @e.total_of_cols(); j++){
-                if(e.is_alive(i,j)){
+               /* if(e.is_alive(i,j)){
                     <td class="cell alive"></td>
                 }
                 else
                 {
                     <td class="cell dead"></td>
-                }
+                }*/
             }
         </tr>
     }
@@ -44,6 +44,6 @@
     private void IncrementCount()
     {
         currentCount++;
-        e.nextConwayStep();
+        //e.nextConwayStep();
     }
 }

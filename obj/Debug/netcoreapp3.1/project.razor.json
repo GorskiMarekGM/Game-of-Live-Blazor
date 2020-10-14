@@ -111,6 +111,39 @@
         }
       },
       {
+        "HashCode": 1860679801,
+        "Kind": "Components.Component",
+        "Name": "blazorserver01.Pages.FetchData",
+        "AssemblyName": "blazorserver01",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "blazorserver01.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": 1456457493,
+        "Kind": "Components.Component",
+        "Name": "blazorserver01.Pages.FetchData",
+        "AssemblyName": "blazorserver01",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "blazorserver01.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "blazorserver01.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -598686821,
         "Kind": "Components.Component",
         "Name": "blazorserver01.Pages.Counter",
@@ -173,39 +206,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "blazorserver01.Pages.Rabbits_and_carrots",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1860679801,
-        "Kind": "Components.Component",
-        "Name": "blazorserver01.Pages.FetchData",
-        "AssemblyName": "blazorserver01",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": 1456457493,
-        "Kind": "Components.Component",
-        "Name": "blazorserver01.Pages.FetchData",
-        "AssemblyName": "blazorserver01",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "blazorserver01.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
