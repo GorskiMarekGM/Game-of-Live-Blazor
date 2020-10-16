@@ -7,6 +7,8 @@ namespace blazorserver01.Data
         public int posy;
 
         public Environment parent;
+        protected int living;
+        protected int livingTop;
 
         public BioUnit(int x, int y, Environment e)
         {
@@ -17,21 +19,8 @@ namespace blazorserver01.Data
         }
 
         public string myColor() => this.color;
-        /*private bool alive; 
-        public BioUnit() {
-            this.alive = false;
-        }
-        public bool is_alive() {
-            return this.alive;
-        }
-        public bool is_dead() {
-            return !this.alive;
-        }
-        public void live() {
-            this.alive = true;
-        }
-        public void die() {
-            this.alive = false;
-        }*/
+
+        public virtual bool will_I_live() => true;
+        
     }
 }
