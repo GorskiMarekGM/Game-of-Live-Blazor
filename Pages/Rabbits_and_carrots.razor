@@ -8,23 +8,33 @@
 @{
     //initial pattern
     if(currentCount == 0){
-        u = new Data.Rabbit(3,3);
+        u = new Data.Rabbit(3,3,e);
         e.insert(3,3,u);
-        u = new Data.Rabbit(3,4);
+        u = new Data.Rabbit(3,4,e);
         e.insert(3,4,u);
-        u = new Data.Rabbit(3,5);
+        u = new Data.Rabbit(3,5,e);
         e.insert(3,5,u);
-        u = new Data.Rabbit(2,5);
+        u = new Data.Rabbit(2,5,e);
         e.insert(2,5,u);
-        u = new Data.Rabbit(1,4);
+        u = new Data.Rabbit(1,4,e);
         e.insert(1,4,u);
 
-        u = new Data.Carrot(11,14);
+        u = new Data.Carrot(11,14,e);
         e.insert(11,14,u);
-        u = new Data.Carrot(12,15);
+        u = new Data.Carrot(12,15,e);
         e.insert(12,15,u);
-        u = new Data.Carrot(13,14);
+        u = new Data.Carrot(13,14,e);
         e.insert(13,14,u);
+        u = new Data.Carrot(0,0,e);
+        e.insert(0,0,u);
+
+        int count1 = e.neighbors(2,4).Count();
+        int count2 = e.neighbors(13,14).Count();
+        int count3 = e.neighbors(1,1).Count();
+        Console.WriteLine("Neighbors");
+        Console.WriteLine(count1);
+        Console.WriteLine(count2);
+        Console.WriteLine(count3);
     }
 
 }
@@ -33,7 +43,7 @@
         <tr>
             @for(var j=0; j< @e.total_of_cols(); j++){
                 if(e.bioUnit(i,j)!=null){
-                    <td class="cell alive"></td>
+                    <td class="cell" style="background-color:@e.bioUnit(i,j).myColor()"></td>
                 }
                 else
                 {

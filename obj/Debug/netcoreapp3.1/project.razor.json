@@ -45,6 +45,39 @@
         }
       },
       {
+        "HashCode": -598686821,
+        "Kind": "Components.Component",
+        "Name": "blazorserver01.Pages.Counter",
+        "AssemblyName": "blazorserver01",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "blazorserver01.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": -1278200360,
+        "Kind": "Components.Component",
+        "Name": "blazorserver01.Pages.Counter",
+        "AssemblyName": "blazorserver01",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "blazorserver01.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "blazorserver01.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1126226755,
         "Kind": "Components.Component",
         "Name": "blazorserver01.Pages.Error",
@@ -74,39 +107,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "blazorserver01.Pages.Error",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -535160095,
-        "Kind": "Components.Component",
-        "Name": "blazorserver01.Pages.Index",
-        "AssemblyName": "blazorserver01",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Pages.Index"
-        }
-      },
-      {
-        "HashCode": -191280479,
-        "Kind": "Components.Component",
-        "Name": "blazorserver01.Pages.Index",
-        "AssemblyName": "blazorserver01",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "blazorserver01.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -144,35 +144,35 @@
         }
       },
       {
-        "HashCode": -598686821,
+        "HashCode": -535160095,
         "Kind": "Components.Component",
-        "Name": "blazorserver01.Pages.Counter",
+        "Name": "blazorserver01.Pages.Index",
         "AssemblyName": "blazorserver01",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Pages.Counter"
+          "Common.TypeName": "blazorserver01.Pages.Index"
         }
       },
       {
-        "HashCode": -1278200360,
+        "HashCode": -191280479,
         "Kind": "Components.Component",
-        "Name": "blazorserver01.Pages.Counter",
+        "Name": "blazorserver01.Pages.Index",
         "AssemblyName": "blazorserver01",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "blazorserver01.Pages.Counter"
+            "TagName": "blazorserver01.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Pages.Counter",
+          "Common.TypeName": "blazorserver01.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -306,6 +306,39 @@
         }
       },
       {
+        "HashCode": -75142760,
+        "Kind": "Components.Component",
+        "Name": "blazorserver01.Shared.NavMenu",
+        "AssemblyName": "blazorserver01",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "blazorserver01.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1169988645,
+        "Kind": "Components.Component",
+        "Name": "blazorserver01.Shared.NavMenu",
+        "AssemblyName": "blazorserver01",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "blazorserver01.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "blazorserver01.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 849647778,
         "Kind": "Components.Component",
         "Name": "blazorserver01.Shared.SurveyPrompt",
@@ -355,39 +388,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "blazorserver01.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -75142760,
-        "Kind": "Components.Component",
-        "Name": "blazorserver01.Shared.NavMenu",
-        "AssemblyName": "blazorserver01",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -1169988645,
-        "Kind": "Components.Component",
-        "Name": "blazorserver01.Shared.NavMenu",
-        "AssemblyName": "blazorserver01",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "blazorserver01.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "blazorserver01.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace blazorserver01.Data
 {
     public class Environment
@@ -5,18 +7,22 @@ namespace blazorserver01.Data
         private int rows = 1;
         private int cols = 1;
         private BioUnit[,] cell; 
-        /*public int aliveNeighbors(int i,int j) {
-            int c=0;
-            c += this.is_alive(i-1,j-1)?1:0;
-            c += this.is_alive(i-1,j)?1:0;
-            c += this.is_alive(i-1,j+1)?1:0;
-            c += this.is_alive(i,j-1)?1:0;
-            c += this.is_alive(i,j+1)?1:0;
-            c += this.is_alive(i+1,j-1)?1:0;
-            c += this.is_alive(i+1,j)?1:0;
-            c += this.is_alive(i+1,j+1)?1:0;
-            return c;
-        }*/
+        
+        
+        public List<BioUnit> neighbors (int i, int j){
+            List<BioUnit> ans = new List<BioUnit>();
+            if(this.rightPos(i,j)){
+                if(this.rightPos(i-1,j-1) && this.cell[i-1,j-1]!= null) ans.Add(this.cell[i-1,j-1]);
+                if(this.rightPos(i-1,j) && this.cell[i-1,j]!= null) ans.Add(this.cell[i-1,j]);
+                if(this.rightPos(i-1,j+1) && this.cell[i-1,j+1]!= null) ans.Add(this.cell[i-1,j+1]);
+                if(this.rightPos(i,j-1) && this.cell[i,j-1]!= null) ans.Add(this.cell[i,j-1]);
+                if(this.rightPos(i,j+1) && this.cell[i,j+1]!= null) ans.Add(this.cell[i,j+1]);
+                if(this.rightPos(i+1,j-1) && this.cell[i+1,j-1]!= null) ans.Add(this.cell[i+1,j-1]);
+                if(this.rightPos(i+1,j) && this.cell[i+1,j]!= null) ans.Add(this.cell[i+1,j]);
+                if(this.rightPos(i+1,j+1) && this.cell[i+1,j+1]!= null) ans.Add(this.cell[i+1,j+1]);
+            }
+            return ans;
+        }
 
         public Environment(int rows_,int columns_) {
             this.rows = rows_;
