@@ -5,10 +5,12 @@ namespace blazorserver01.Data
         protected string color;
         public int posx;
         public int posy;
-
-        public Environment parent;
         protected int living;
         protected int livingTop;
+        protected int hungry;
+        protected int hungryTop;
+
+        public Environment parent;
 
         public BioUnit(int x, int y, Environment e)
         {
