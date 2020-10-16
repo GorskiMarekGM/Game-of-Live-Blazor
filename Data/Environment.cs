@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.ComponentModel;
+using System;
 
 namespace blazorserver01.Data
 {
@@ -22,6 +24,24 @@ namespace blazorserver01.Data
                 if(this.rightPos(i+1,j+1) && this.cell[i+1,j+1]!= null) ans.Add(this.cell[i+1,j+1]);
             }
             return ans;
+        }
+
+        public int surrondingNeighborns(int i, int j, String specie){
+            int ans=0;
+            List<BioUnit> surr = this.neighbors(i,j);
+            Console.WriteLine(" i j "+ i.ToString() + " , "+ j.ToString());
+            foreach (object unit in surr)
+            {
+                if(this.specie(unit)==specie) ans++;
+            }
+            return ans;
+        }
+
+        public String specie(Object obj){
+            String[]w;
+            if(obj==null) return "";
+            w = TypeDescriptor.GetClassName(obj).Split(" . ");
+            return w[w.Length-1];
         }
 
         public Environment(int rows_,int columns_) {
@@ -55,44 +75,5 @@ namespace blazorserver01.Data
             }
             return null;
         }
-        /*public void live(int i,int j) {
-            if(this.rightPos(i,j))
-                this.cell[i,j].live();
-        }
-        public void die(int i,int j) {
-            if(this.rightPos(i,j))
-                this.cell[i,j].die();
-        }
-        private bool rightPos(int i,int j){
-            return i>=0 && i<this.rows && j>=0 && j<this.cols;
-        }
-        public bool is_alive(int i,int j) {
-            if(this.rightPos(i,j))
-                return this.cell[i,j].is_alive();
-            return false;
-        }
-
-        public void nextConwayStep() {
-            int n;
-            bool[,] aux = new bool[this.rows,this.cols];
-            for(var i=0; i<this.rows; i++)
-            for(var j=0; j<this.cols; j++) {
-                 n = this.aliveNeighbors(i,j);
-                 
-            if(n==3) //Conway’s original rule
-                 aux[i,j] = true;
-            else if (n==2 && this.is_alive(i,j))
-                 aux[i,j] = true;
-            else
-                  aux[i,j] = false;
-            }
-            for(var i=0; i<this.rows; i++)
-            for(var j=0; j<this.cols; j++) {
-                if(aux[i,j])
-                    this.live(i,j);
-                else
-                 this.die(i,j);
-                }
-        }*/
     }
 }
