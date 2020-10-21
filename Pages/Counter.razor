@@ -41,10 +41,23 @@
 
     <input type="radio" name="myradiobtn"
         checked="@(theRadio.Equals("many"))"
-        value = "step"
+        value = "many"
         @onchange="ClickRadio"/> Several steps
 
 </p>
+<div style="display:@(theRadio.Equals("many")?"":"none")">
+    <h5>Cycles specification</h5>
+    Number of Cycles
+    <input @bind="cyclesPerTime"/> (internal value: @cyclesPerTime))
+    <br>
+    <select @bind="option">
+        <option value="1">1 st </option>
+        <option value="2">2 st </option>
+        <option value="3">3 st </option>
+    </select>
+    <br>
+    Our option is @option
+</div>
 <hr>
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 
@@ -53,12 +66,15 @@
     href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
     target="_blank">
     Look for Patterns in Wikipedia
+
 </a>
 @code {
     private int currentCount = 0;
     private Data.BioUnit u;
     private Data.Environment e = new Data.Environment(30,30);
     private string theRadio ="";
+    private int cyclesPerTime = 0;
+    private string option = "";
 
     private void IncrementCount()
     {
