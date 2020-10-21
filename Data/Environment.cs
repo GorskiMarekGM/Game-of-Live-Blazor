@@ -80,6 +80,7 @@ namespace blazorserver01.Data
             return w[w.Length - 1];
         }
 
+
         public Rabbit firstRabbit(int i, int j)
         {
             List<BioUnit> neis = this.neighbors(i, j);
