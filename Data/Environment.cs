@@ -174,6 +174,20 @@ namespace blazorserver01.Data
                     this.insert(x+i,y+j,new BioUnit(x+i,x+j,this));
                 }
             }
+            if(pattern.Equals("mypattern")){
+                for(var i = 0; i<14 ;i++) //rows
+                for(var j = 0; j<14 ; j++) //cols
+                if( !((i%2==0)||(i==3 && j==7))){
+                    this.insert(x+i,y+j,new BioUnit(x+i,x+j,this));
+                }
+            }
+            if(pattern.Equals("LWSS")){
+                for(var i = 0; i<4 ;i++) //rows
+                for(var j = 0; j<5 ; j++) //cols
+                if( ((i==0 && j==0)||(i==0 && j==3)||(i==1 && j==4)||(i==2 && j==0)||(i==2 && j==4)||(i==3 && j==1)||(i==3 && j==2)||(i==3 && j==3)||(i==3 && j==4))){
+                    this.insert(x+i,y+j,new BioUnit(x+i,x+j,this));
+                }
+            }
         }
     }
 }

@@ -74,7 +74,13 @@
 <div class="PentaPatt" style="display: @(pentaDisplay); width: 45em; height:3em; border: 1px solid #000; margin-bottom: 10px; text-align:center; padding:5px;">
     row <input type="text" style="width: 10em;" @bind="xVal">
     col <input type="text" style="width: 10em;" @bind="yVal">
-    Pattern pentadecathlon
+    
+    <select @bind="patternName">
+        <option value="pentadecathlon">pentadecathlon </option>
+        <option value="mypattern">mypattern</option>
+        <option value="LWSS">LWSS </option>
+    </select>
+
     <button class="btn btn-primary" @onclick="AddPattern">Add</button>
 </div>
 
@@ -89,6 +95,7 @@
     private string pentaDisplay ="none";
     private int xVal;
     private int yVal;
+    private string patternName ="";
 
 
 
@@ -114,7 +121,7 @@
     }
 
     private void AddPattern(){
-        e.put_pattern(xVal,yVal,"pentadecathlon");
+        e.put_pattern(xVal,yVal,patternName);
         xVal=0;
         yVal=0;
     }
