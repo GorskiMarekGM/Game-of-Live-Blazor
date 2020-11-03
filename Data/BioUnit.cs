@@ -16,7 +16,7 @@ namespace blazorserver01.Data
         {
             this.posx = x;
             this.posy = y;
-            this.color = "#444444";
+            this.color = "#4FEA00";
             this.parent = e;
         }
 
