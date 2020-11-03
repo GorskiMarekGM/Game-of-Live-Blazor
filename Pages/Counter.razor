@@ -61,6 +61,9 @@
 </div>
 <hr>
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
+<button class="btn btn-primary" @onclick="PatternManagement">@title</button>
+<br>
+<div>@penta</div>
 
 <a
     class="btn btn-primary"
@@ -76,6 +79,8 @@
     private string theRadio ="";
     private int cyclesPerTime = 0;
     private string option = "";
+    private string title = "Add pattern...";
+    private string penta ="";
 
     private void IncrementCount()
     {
@@ -86,5 +91,15 @@
     private void ClickRadio(ChangeEventArgs args){
         theRadio = args.Value.ToString();
         currentCount++;
+    }
+
+    private void PatternManagement(){
+        if(title=="Add pattern..."){
+            title = "Add pattern(-)";
+            penta = "Add pattern pentadecathlon";
+        }else{
+            title="Add pattern...";
+            penta ="";
+        }
     }
 }
