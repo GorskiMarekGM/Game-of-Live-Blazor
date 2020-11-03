@@ -16,7 +16,7 @@
         e.live(6,5);
         e.live(5,6);
         e.live(6,6);*/
-        e.put_pattern(6,6,"pentadecathlon");
+        @* e.put_pattern(6,6,"pentadecathlon"); *@
     }
 
 }
@@ -62,9 +62,6 @@
 <hr>
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 <button class="btn btn-primary" @onclick="PatternManagement">@title</button>
-<br>
-<div>@penta</div>
-
 <a
     class="btn btn-primary"
     href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
@@ -72,6 +69,15 @@
     Look for Patterns in Wikipedia
 
 </a>
+<br>
+<br>
+<div class="PentaPatt" style="display: @(pentaDisplay); width: 45em; height:3em; border: 1px solid #000; margin-bottom: 10px; text-align:center; padding:5px;">
+    row <input type="text" style="width: 10em;" @bind="xVal"> @xVal
+    col <input type="text" style="width: 10em;" @bind="yVal"> @yVal
+    Pattern pentadecathlon
+    <button class="btn btn-primary" @onclick="AddPattern">Add</button>
+</div>
+
 @code {
     private int currentCount = 0;
     private Data.BioUnit u;
@@ -80,7 +86,11 @@
     private int cyclesPerTime = 0;
     private string option = "";
     private string title = "Add pattern...";
-    private string penta ="";
+    private string pentaDisplay ="none";
+    private int xVal;
+    private int yVal;
+
+
 
     private void IncrementCount()
     {
@@ -95,11 +105,17 @@
 
     private void PatternManagement(){
         if(title=="Add pattern..."){
+            pentaDisplay ="block";
             title = "Add pattern(-)";
-            penta = "Add pattern pentadecathlon";
         }else{
+            pentaDisplay="none";
             title="Add pattern...";
-            penta ="";
         }
+    }
+
+    private void AddPattern(){
+        e.put_pattern(xVal,yVal,"pentadecathlon");
+        xVal=0;
+        yVal=0;
     }
 }
