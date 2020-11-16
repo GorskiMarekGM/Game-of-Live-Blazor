@@ -14,7 +14,20 @@
     int svgw = e.total_of_cols()*9+2;
 
 }
-<table class="environment">
+<svg width="@svgw" height="@svgh">
+    @for(var i=0; i< @e.total_of_rows(); i++){
+        for(var j=0; j< @e.total_of_cols();j++){
+            int cy = (i*9+4+1);
+            int cx = (j*9+4+1);
+            @if(e.biounit(i,j)!=null){
+                <circle cx="@cx" cy="@cy" r="4" fill="#90FA90" />
+            }else {
+                <circle cx="@cx" cy="@cy" r="4" fill="#909090" />
+            }
+        }
+    }
+</svg>
+@* <table class="environment">
     @for(var i=0; i<@e.total_of_rows(); i++) {
         <tr>
             @for(var j=0; j<@e.total_of_cols(); j++) {
@@ -27,7 +40,7 @@
             }
         </tr>
     }
-</table>
+</table> *@
 <p>
     <input type="radio" name="myradiobtn"
         checked="@(theRadio.Equals("step"))"
