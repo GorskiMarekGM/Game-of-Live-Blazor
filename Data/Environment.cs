@@ -166,6 +166,15 @@ namespace blazorserver01.Data
                 }
         }
 
+        public void onOff(int row, int col){
+            if(this.rightPos(row,col)){
+                if(this.cell[row,col]!=null)
+                    this.cell[row,col]=null;
+                else
+                    this.cell[row,col] = new BioUnit(row,col,this);
+            }
+        }
+
         public void put_pattern(int x, int y, string pattern){
             if(pattern.Equals("pentadecathlon")){
                 for(var i = 0; i<8 ;i++) //rows
@@ -189,5 +198,7 @@ namespace blazorserver01.Data
                 }
             }
         }
+
+
     }
 }
