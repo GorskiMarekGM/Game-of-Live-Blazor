@@ -24,12 +24,14 @@
         for(var j=0; j< @e.total_of_cols();j++){
             int cy = (i*9+4+1);
             int cx = (j*9+4+1);
+            int idx = i;
+            int jdx = j;
             @if(e.biounit(i,j)!=null){
                 <circle cx="@cx" cy="@cy" r="4" fill="#90FA90"
-                filter="url{#myBlur}" />
+                filter="url{#myBlur}" @onclick="() => CellClick(idx,jdx)"/>
             }else {
                 <circle cx="@cx" cy="@cy" r="4" fill="#909090"
-                filter="url{#myBlur}" />
+                filter="url{#myBlur}" @onclick="() => CellClick(idx,jdx)"/>
             }
         }
     }
@@ -111,7 +113,10 @@
     private int yVal;
     private string patternName ="";
 
-
+    private bool CellClick(int row, int col){
+        Console.WriteLine(row.ToString()+" -- "+ col.ToString());
+        return true;
+    }
 
     private void IncrementCount()
     {
