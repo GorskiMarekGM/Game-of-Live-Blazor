@@ -1,16 +1,26 @@
 @page "/bouncing_ball"
-
+@using System
 
 <h1>Bouncing Ball</h1>
 
 <hr>
+@{
+    //initial pattern
 
+        b=new Data.Ball(3,3,2,e);
+        e.insert(3,3,b);
+
+}
 <table class = "environment">
     @for(var i=0; i< @e.total_of_rows(); i++){
         <tr>
             @for(var j=0; j< @e.total_of_cols(); j++){
-                if(e.biounit(i,j)!=null){
+                if(e.ballunit(i,j)!=null){
+                    <td class="cell" style="background-color:@e.ballunit(i,j).myColor()"></td>
+
+                    @* if(e.biounit(i,j)!=null){
                     <td class="cell" style="background-color:@e.biounit(i,j).myColor()"></td>
+                    } *@
                 }
                 else
                 {
@@ -22,10 +32,7 @@
 </table>
 
 @code {
-    private Data.Environment e = new Data.Environment(40,40);
-    private Data.BouncingBall b;
-    private void IncrementCount()
-    {
-        e.next_Rabbit_Carrot_Step();
-    }
+    private Data.BallEnvironment e = new Data.BallEnvironment(40,40);
+    private Data.Ball b;
+
 }

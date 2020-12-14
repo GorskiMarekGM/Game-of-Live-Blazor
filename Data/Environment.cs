@@ -29,6 +29,7 @@ namespace blazorserver01.Data
         {
             return ((i >= 0) && (i < this.rows) && (j >= 0) && (j < this.cols));
         }
+
         public void insert(int i, int j, BioUnit been)
         {
             if (this.rightPos(i, j))
